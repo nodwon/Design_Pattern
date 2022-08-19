@@ -2,6 +2,7 @@ package Proxy;
 
 public class Browser implements IBroswser{
     private String url;
+    private Html html;
     public Browser(String url){
         this.url=url;
     }
