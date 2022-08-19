@@ -1,6 +1,5 @@
 package singleton;
 
-import Proxy.*;
 import adapter.*;
 import singleton.Aclass;
 import singleton.Bclass;
@@ -23,9 +22,6 @@ public class Main {
         AairConditioner aairConditioner = new AairConditioner();
         Electrionic110V airAdapter = new SocketAdapter(aairConditioner);
         connect(airAdapter);
-
-        Browser browser = new Browser("www.naver.com");
-        browser.show();
     }
     //콘센트
     public static void connect(Electrionic110V electrionic110V){
