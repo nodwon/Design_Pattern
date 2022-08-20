@@ -43,6 +43,9 @@ public class Main {
         });
         aopbroswser.show();
         System.out.println("loding time:" +end.get());
+
+        aopbroswser.show();
+        System.out.println("loding time:" +end.get());
     }
     //콘센트
     public static void connect(Electrionic110V electrionic110V){
