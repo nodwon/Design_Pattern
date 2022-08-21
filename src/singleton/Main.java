@@ -3,6 +3,7 @@ package singleton;
 import Proxy.IBroswser;
 import adapter.*;
 import aop.AopBrowser;
+import decorator.*;
 import singleton.Aclass;
 import singleton.Bclass;
 import singleton.SocketClient;
@@ -46,6 +47,21 @@ public class Main {
 
         aopbroswser.show();
         System.out.println("loding time:" +end.get());
+
+
+        ICar audi = new Audi(1000);
+        audi.showPrice();
+        // a3
+        ICar audi3 = new A3(audi,"A3");
+        audi3.showPrice();
+        // a4
+        ICar audi4 = new A4(audi,"A4");
+        audi4.showPrice();
+
+        // a5
+        ICar audi5 = new A5(audi,"A4");
+        audi5.showPrice();
+
     }
     //콘센트
     public static void connect(Electrionic110V electrionic110V){
