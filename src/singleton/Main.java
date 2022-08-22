@@ -4,6 +4,8 @@ import Proxy.IBroswser;
 import adapter.*;
 import aop.AopBrowser;
 import decorator.*;
+import observer.Button;
+import observer.IButtonListener;
 import singleton.Aclass;
 import singleton.Bclass;
 import singleton.SocketClient;
@@ -61,6 +63,18 @@ public class Main {
         // a5
         ICar audi5 = new A5(audi,"A4");
         audi5.showPrice();
+
+        Button button = new Button("버튼");
+
+        button.addListener(new IButtonListener() {
+            @Override
+            public void clickEvent(String event) {
+                System.out.println(event);
+            }
+        });
+        button.click("메시지 전달: click");
+        button.click("메시지 전달: click2");
+        button.click("메시지 전달: click3");
 
     }
     //콘센트
