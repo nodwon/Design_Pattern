@@ -1,5 +1,6 @@
 package singleton;
 
+import Facade.FTP;
 import Proxy.IBroswser;
 import adapter.*;
 import aop.AopBrowser;
@@ -75,7 +76,6 @@ public class Main {
         button.click("메시지 전달: click");
         button.click("메시지 전달: click2");
         button.click("메시지 전달: click3");
-
     }
     //콘센트
     public static void connect(Electrionic110V electrionic110V){
